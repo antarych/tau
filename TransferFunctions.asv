@@ -1,0 +1,6 @@
+function TransferFunctions(typeOf)
+[coefY, coefU, coefV] = GenerateCoefficients();
+SaveDifferentialEquation(coefY, coefU, coefV);
+FindTransferFunction(coefY, coefU, coefV);
+end
+
