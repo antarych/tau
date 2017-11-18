@@ -1,5 +1,5 @@
-function [coefY, coefU, coefV] = GenerateCoefficients()
-maxDerivative = randi([2,3]); 
+function [coefY, coefU, coefV] = GenerateCoefficients(maxVal)
+maxDerivative = randi([2,maxVal]); 
 n = maxDerivative + 1;
 coefY = zeros(1, n);
 coefU = zeros(1, n);

@@ -1,4 +1,4 @@
-function FindTransferFunction( coefY, coefU, coefV, fileName)
+function [answer] = FindTransferFunction( coefY, coefU, coefV, type) %поиск передаточной функции
 n = length(coefY);
 syms p s numeratorU numeratorV denominator;
 
@@ -22,13 +22,12 @@ Ssu = strrep(Su,'p','s');
 Sv = latex(simplify(numeratorV/denominator));
 Ssv = strrep(Sv,'p','s');
 answer1 = ['\\W_{u}(p) = ' Wu '\;\;\;\;\;\;\;\;' 'W_{v}(p) = ' Wv];
-answer2 = ['\\W_{1}(s) = W_{1}(p)|_{p=s} = ' Ssu '\;\;\;\;\;\;\;\;W_{2}(s) = W_{2}(p)|_{p=s} = ' Ssv];
-answer = [answer1 answer2];
-if strcmp(fileName, 'task.tex')
-    SaveLaTeX(answer1, fileName);
+answer2 = ['\\W_{1}(s) = ' Ssu '\;\;\;\;\;\;\;\;W_{2}(s) = ' Ssv];
+if (type == 1)
+    answer = answer1;
 end;
-if strcmp(fileName,'answers.tex')
-    SaveLaTeX(answer, fileName);
+if (type == 2)
+    answer = answer2;
 end;
 end
 

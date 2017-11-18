@@ -1,4 +1,4 @@
-function SaveDifferentialEquation(coefY, coefU, coefV, fileName)
+function DU = SaveDifferentialEquation(coefY, coefU, coefV) %формирование ƒ” дл€ записи в файл
 n = length(coefY);
 fullPartY = '';
 fullPartU = '';
@@ -40,7 +40,7 @@ for i = n:-1:1;
     end;
     if coefU(i) ~= 0
         coef = num2str(coefU(i));
-        if coefV == 1
+        if coefU == 1
             coef = '';
         end;
         partU = [fullPartU '' num2str(coefU(i)) derivativeU];
@@ -79,9 +79,7 @@ if fullPartV(a-1) == '+'
     fullPartV(a) = [];
     fullPartV(a-1) = [];
 end;
-equation = [fullPartY ' = ' fullPartU ' + ' fullPartV];
-%textOfaTask = 'ќпределить передаточные функции в операторой форме и в изображени€х Ћапласа систем управлени€, которые описываютс€ следующими уравнени€ми (y Ч выход, u, v Ч вход):';   
-%fullTask = [textOfaTask '\newline' equation];
-SaveLaTeX(equation, fileName)
+equation = [fullPartY ' = ' fullPartU ' + ' fullPartV];   
+DU = ['\\' equation];
 end
 

@@ -1,5 +1,2 @@
-
-.tex/
-.pdf/
-.asv/
-.gz/
+tasks/
+*.asv
