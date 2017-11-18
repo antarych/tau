@@ -7,9 +7,17 @@ answer = [a '1)' answer1];
 fullTask = task;
 fullAnswer = answer;
 
-[task1, answer1] = WeightFunction();
-task = [fullTask '\\\\2)' task1];
-answer = [fullAnswer '\\\\2)' answer1];
+n = randi([1,2]);
+if n == 1
+    [task1, answer1] = WeightFunction();
+    task = [fullTask '\\\\2)' task1];
+    answer = [fullAnswer '\\\\2)' answer1];
+end;
+if n == 2
+    [task1, answer1] = StepResponse();
+    task = [fullTask '\\\\2)' task1];
+    answer = [fullAnswer '\\\\2)' answer1];
+end;
 
 fullTask = task;
 fullAnswer = answer;
