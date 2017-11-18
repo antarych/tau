@@ -7,21 +7,26 @@ answer = [a '1)' answer1];
 fullTask = task;
 fullAnswer = answer;
 
-n = randi([1,3]); %2-ое задание - найти весовую или переходную функцию или частотные характеристики
+n = randi([4,4]); %2-ое задание - найти весовую или переходную функцию или частотные характеристики или реакция системы
 if n == 1
     [task1, answer1] = WeightFunction();
-    task = [fullTask '\\\\2)' task1];
-    answer = [fullAnswer '\\\\2)' answer1];
+    task = [fullTask '\\\\2)\\' task1];
+    answer = [fullAnswer '\\\\2)\\' answer1];
 end;
 if n == 2
     [task1, answer1] = StepResponse();
-    task = [fullTask '\\\\2)' task1];
-    answer = [fullAnswer '\\\\2)' answer1];
+    task = [fullTask '\\\\2)\\' task1];
+    answer = [fullAnswer '\\\\2)\\' answer1];
 end;
 if n == 3
     [task1, answer1] = FrequencyFunction();
-    task = [fullTask '\\\\2)' task1];
-    answer = [fullAnswer '\\\\2)' answer1];
+    task = [fullTask '\\\\2)\\' task1];
+    answer = [fullAnswer '\\\\2)\\' answer1];
+end;
+if n == 4
+    [task1, answer1] = SysReaction();
+    task = [fullTask '\\\\2)\\' task1];
+    answer = [fullAnswer '\\\\2)\\' answer1];
 end;
 
 fullTask = task;
