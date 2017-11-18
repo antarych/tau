@@ -7,7 +7,7 @@ answer = [a '1)' answer1];
 fullTask = task;
 fullAnswer = answer;
 
-n = randi([1,2]);
+n = randi([1,3]); %2-ое задание - найти весовую или переходную функцию или частотные характеристики
 if n == 1
     [task1, answer1] = WeightFunction();
     task = [fullTask '\\\\2)' task1];
@@ -15,6 +15,11 @@ if n == 1
 end;
 if n == 2
     [task1, answer1] = StepResponse();
+    task = [fullTask '\\\\2)' task1];
+    answer = [fullAnswer '\\\\2)' answer1];
+end;
+if n == 3
+    [task1, answer1] = FrequencyFunction();
     task = [fullTask '\\\\2)' task1];
     answer = [fullAnswer '\\\\2)' answer1];
 end;
