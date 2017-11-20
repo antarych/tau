@@ -7,12 +7,6 @@ n = randi([1,10])/10;
 v = randi([1,30])/10;
 vv = v;
 v = sprintf('%.1f',v);
-% l1 = 1;
-% l2 = 4;
-% m = 1;
-% n = 0.2;
-% v = 2;
-% d = 3;
 
 syms s t;
 while d >= (1/n)

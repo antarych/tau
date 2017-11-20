@@ -1,3 +1,4 @@
+
 function SaveLaTeX(task, fileName) %сохранение передаточных функций в файл
 beginning = '\documentclass{article}\usepackage[utf8]{inputenc}\usepackage{amsmath, amssymb, amsfonts, amsthm, fouriernc}\usepackage[T2A]{fontenc}\usepackage[russian]{babel}\begin{document}\noindent';
 ending = ' \end{math}\end{document}';
