@@ -7,15 +7,15 @@ n = randi([1,2]); %выбирается тип задания (что дано - ДУ или передаточная функци
 type = randi([1,2]); %выбирается, в каком виде искать передаточную функцию, если дано ДУ
 if n == 1
     if type == 1
-        task = ['Найдите передаточную функцию в операторной форме:' SaveDifferentialEquation(coefY, coefU, coefV)];
+        task = ['1)\mbox{Найдите передаточную функцию в операторной форме:}' SaveDifferentialEquation(coefY, coefU, coefV)];
     end;
     if type == 2
-        task = ['Найдите передаточную функцию в изображениях Лапласа:' SaveDifferentialEquation(coefY, coefU, coefV)];
+        task = ['1)\mbox{Найдите передаточную функцию в изображениях Лапласа:}' SaveDifferentialEquation(coefY, coefU, coefV)];
     end;
     answer = FindTransferFunction(coefY, coefU, coefV, type);
 end;
 if n == 2 
-    task = ['Найдите ДУ по заданной передаточной функции:' FindTransferFunction(coefY, coefU, coefV, 1)];
+    task = ['1)\mbox{Найдите ДУ по заданной передаточной функции:}' FindTransferFunction(coefY, coefU, coefV, 1)];
     answer = SaveDifferentialEquation(coefY, coefU, coefV);
 end;
 end

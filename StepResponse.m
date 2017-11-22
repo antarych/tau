@@ -5,7 +5,7 @@ coefU(2) = randi([0,10]);
 coefU(3) = 0;
 firstFullStr = FindTransferFunction(coefY, coefU, coefV, 2); %получение передаточной функции в изображениях Лапласа (условие)
 tf = RemoveUseless(firstFullStr);
-task = ['\\W(s) = ' latex(simplify(tf))];
+task = ['2)\mbox{Найти переходную функцию:}\\W(s) = ' latex(simplify(tf))];
 syms s 
 temp = simplify(simplify(tf)/s);
 stepResponse = latex(simplify(ilaplace(temp)));

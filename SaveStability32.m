@@ -2,11 +2,11 @@ function [task, answer] = SaveStability32()
 coef = Generate();
 coef(1)=1;
 if coef(2)*coef(3)*coef(4)-coef(2)*coef(2)*coef(5)-coef(1)*coef(4)*coef(4)>0
-    g='systema ustoychiva';
-else g='systema neustoychiva';
+    g='Система устойчивая';
+else g='Система неустойчивая';
 end
 eq = ['\\\frac{d^4y}{dt^4}' '+' num2str(coef(2)) '\frac{d^3y}{dt^3}' '+' num2str(coef(3)) '\frac{d^2y}{dt^2}' '+' num2str(coef(4)) '\frac{dy}{dt}' '+' num2str(coef(5))];
-equation = [eq ' =' num2str(coef(6)) '\frac{du}{dt} +' num2str(coef(7)) ];
+equation = ['3)\mbox{Исследовать устойчивость системы управления, которая описывается следующим уравнением:}' eq ' =' num2str(coef(6)) '\frac{du}{dt} +' num2str(coef(7)) ];
 task = equation;
 answer = g;
 end

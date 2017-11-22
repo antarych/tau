@@ -21,10 +21,10 @@ Ws = latex(simplify(numerator/denominator));
 ch = randi([1,2]); %sin or cos
 t = ['W(s) = ' Ws];
 if ch == 1
-    task = [t '\\u = ' v '\cos(' d 't)'];
+    task = ['2)\mbox{На вход системы подается сигнал. Определить в установившемся режиме реакцию системы при следующей передаточной функции:}\\' t '\\u = ' v '\cos(' d 't)'];
 end;
 if ch == 2
-    task = [t '\\u = ' v '\sin(' d 't)'];
+    task = ['2)\mbox{На вход системы подается сигнал. Определить в установившемся режиме реакцию системы при следующей передаточной функции:}\\' t '\\u = ' v '\sin(' d 't)'];
 end;
 numerator = sqrt((l1*D)*(l1*D) + l2*l2);
 denominator1 = sqrt(D*D + m*m);
