@@ -7,22 +7,23 @@ partY = '';
 partU = '';
 partV = '';
 for i = n:-1:1;
-    if i == 1
+    switch i
+        case 1
         derivativeY = 'y';
         derivativeU = 'u';
         derivativeV = 'v';
-    end;
-    if i == 2
+
+        case 2
         derivativeY = '\dot{y}';
         derivativeU = '\dot{u}';
         derivativeV = '\dot{v}';
-    end;
-    if i == 3
+
+        case 3
         derivativeY = '\ddot{y}';
         derivativeU = '\ddot{u}';
         derivativeV = '\ddot{v}';
-    end;
-    if i == 4
+
+        case 4
         derivativeY = '\dddot{y}';
         derivativeU = '\dddot{u}';
         derivativeV = '\dddot{v}';

@@ -23,10 +23,11 @@ Sv = latex(simplify(numeratorV/denominator));
 Ssv = strrep(Sv,'p','s');
 answer1 = ['\\W_{u}(p) = ' Wu '\;\;\;\;\;\;\;\;W_{v}(p) = ' Wv];
 answer2 = ['\\W_{1}(s) = ' Ssu '\;\;\;\;\;\;\;\;W_{2}(s) = ' Ssv];
-if (type == 1)
+switch type
+    case 1
     answer = answer1;
-end;
-if (type == 2)
+
+    case 2
     answer = answer2;
 end;
 end

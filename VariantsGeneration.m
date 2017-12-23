@@ -7,56 +7,51 @@ fullTask = task;
 fullAnswer = answer;
 
 n = randi([1,4]); %2-ое задание - найти весовую или переходную функцию или частотные характеристики или реакция системы
-if n == 1
-    [task1, answer1] = WeightFunction();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 2
-    [task1, answer1] = StepResponse();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 3
-    [task1, answer1] = FrequencyFunction();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 4
-    [task1, answer1] = SysReaction();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
+switch n
+    case 1 
+        [task1, answer1] = WeightFunction();
+        task = [fullTask '\\\item ' task1];
+     answer = [fullAnswer '\\\item ' answer1];
 
+    case 2
+        [task1, answer1] = StepResponse();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 3
+        [task1, answer1] = FrequencyFunction();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 4
+        [task1, answer1] = SysReaction();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+end;
 
 fullTask = task;
 fullAnswer = answer;
 
 n = randi([1,5]); %3-е задание на устойчивость
-if n == 1
-    [task1, answer1] = SaveStability();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 2
-    [task1, answer1] = SaveStability32();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 3
-    [task1, answer1] = SaveStability33();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 4
-    [task1, answer1] = SaveStability34();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
-end;
-if n == 5
-    [task1, answer1] = Mikhilov();
-    task = [fullTask '\\\item ' task1];
-    answer = [fullAnswer '\\\item ' answer1];
+switch n
+    case 1
+        [task1, answer1] = SaveStability();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 2
+        [task1, answer1] = SaveStability32();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 3
+        [task1, answer1] = SaveStability33();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 4
+        [task1, answer1] = SaveStability34();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 5
+        [task1, answer1] = Mikhilov();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
 end;
 
 SaveLaTeX(task, 'task.tex');

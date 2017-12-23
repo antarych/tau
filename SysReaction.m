@@ -20,10 +20,11 @@ denominator = (s+m)*(n^2*s^2+n*s+1);
 Ws = latex(simplify(numerator/denominator));
 ch = randi([1,2]); %sin or cos
 t = ['W(s) = ' Ws];
-if ch == 1
+switch ch
+    case 1
     task = ['На вход системы подается сигнал. Определить в установившемся режиме реакцию системы при следующей передаточной функции:\\$' t '\\u = ' v '\cos(' d 't)$'];
-end;
-if ch == 2
+
+    case 2
     task = ['На вход системы подается сигнал. Определить в установившемся режиме реакцию системы при следующей передаточной функции:\\$' t '\\u = ' v '\sin(' d 't)$'];
 end;
 numerator = sqrt((l1*D)*(l1*D) + l2*l2);
@@ -37,18 +38,20 @@ V = vv*A;
 V = sprintf('%.1f',V);
 Phi = sprintf('%.1f',phi);
 if (phi >= 0)
-    if ch == 1
+    switch ch
+        case 1
         answer = ['$u = ' V '\cos(' d 't + ' Phi ')$'];
-    end;
-    if ch == 2
+
+        case 2
         answer = ['$u = ' V '\sin(' d 't + ' Phi ')$'];
     end;
 end;
 if (phi < 0)
-    if ch == 1
+    switch ch
+        case 1
         answer = ['$u = ' V '\cos(' d 't' Phi ')$'];
-    end;
-    if ch == 2
+
+        case 2
         answer = ['$u = ' V '\sin(' d 't' Phi ')$'];
     end;
 end;
