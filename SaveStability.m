@@ -5,8 +5,8 @@ if coef(2)*coef(3)*coef(4)-coef(2)*coef(2)*coef(5)-coef(1)*coef(4)*coef(4)>0
     g='—истема устойчива€';
 else g='—истема неустойчива€';
 end
-eq = ['\\\lambda^4' '+' num2str(coef(2)) '\lambda^3' '+' num2str(coef(3)) '\lambda^2' '+' num2str(coef(4)) '\lambda' '+' num2str(coef(5))];
-equation = ['3)\mbox{»сследовать устойчивость системы управлени€, характеристическое уравнение которой имеет вид:}' eq ' = 0' ];
+eq = ['\lambda^4' '+' num2str(coef(2)) '\lambda^3' '+' num2str(coef(3)) '\lambda^2' '+' num2str(coef(4)) '\lambda' '+' num2str(coef(5))];
+equation = ['»сследовать устойчивость системы управлени€, характеристическое уравнение которой имеет вид:$\\' eq ' = 0$' ];
 task = equation;
 answer = g;
 end

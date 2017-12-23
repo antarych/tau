@@ -21,7 +21,7 @@ Su = latex(simplify(numeratorU/denominator));
 Ssu = strrep(Su,'p','s');
 Sv = latex(simplify(numeratorV/denominator));
 Ssv = strrep(Sv,'p','s');
-answer1 = ['\\W_{u}(p) = ' Wu '\;\;\;\;\;\;\;\;' 'W_{v}(p) = ' Wv];
+answer1 = ['\\W_{u}(p) = ' Wu '\;\;\;\;\;\;\;\;W_{v}(p) = ' Wv];
 answer2 = ['\\W_{1}(s) = ' Ssu '\;\;\;\;\;\;\;\;W_{2}(s) = ' Ssv];
 if (type == 1)
     answer = answer1;

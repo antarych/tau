@@ -80,6 +80,6 @@ if fullPartV(a-1) == '+'
     fullPartV(a-1) = [];
 end;
 equation = [fullPartY ' = ' fullPartU ' + ' fullPartV];   
-DU = ['\\' equation];
+DU = equation;
 end
 
