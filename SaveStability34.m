@@ -8,5 +8,12 @@ end
 eq=['\frac{s^2+' num2str(coef(6)) 's+' num2str(coef(7)) '}{s^4+' num2str(coef(2)) 's^3+' num2str(coef(3)) 's^2+' num2str(coef(4)) 's+' num2str(coef(5)) '}'];
 equation = ['Исследовать устойчивость замкнутой системы по критерию Найквиста при следующей передаточной функции в разомкнутом состоянии:$\\' 'W(s) =' eq '$' ];
 task = equation;
-answer = g;
+H = tf([coef(6) coef(7)],[coef(2) coef(3) coef(4) coef(5)]);
+nyquist(H);
+%print('.\tasks\images\nyquist', '-dpng');
+print('-djpeg', ...
+fullfile('.\', 'tasks', ...
+               ['nyquist', '.eps']));
+close;
+answer = ['\includegraphics[width=1\linewidth]{nyquist}' '\\' g ];
 end
