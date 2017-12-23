@@ -32,7 +32,7 @@ end;
 fullTask = task;
 fullAnswer = answer;
 
-n = randi([1,4]); %3-е задание на устойчивость
+n = randi([1,5]); %3-е задание на устойчивость
 if n == 1
     [task1, answer1] = SaveStability();
     task = [fullTask '\\\item ' task1];
@@ -53,7 +53,11 @@ if n == 4
     task = [fullTask '\\\item ' task1];
     answer = [fullAnswer '\\\item ' answer1];
 end;
-
+if n == 5
+    [task1, answer1] = Mikhilov();
+    task = [fullTask '\\\item ' task1];
+    answer = [fullAnswer '\\\item ' answer1];
+end;
 
 SaveLaTeX(task, 'task.tex');
 SaveLaTeX(answer, 'answer.tex');

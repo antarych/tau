@@ -10,10 +10,9 @@ equation = ['Исследовать устойчивость замкнутой системы по критерию Найквиста пр
 task = equation;
 H = tf([coef(6) coef(7)],[coef(2) coef(3) coef(4) coef(5)]);
 nyquist(H);
-%print('.\tasks\images\nyquist', '-dpng');
-print('-djpeg', ...
+print('-dpng', ...
 fullfile('.\', 'tasks', ...
-               ['nyquist', '.eps']));
+               ['nyquist', '.png']));
 close;
-answer = ['\includegraphics[width=1\linewidth]{nyquist}' '\\' g ];
+answer = [ g '\begin{figure}[htbp]\includegraphics[width=90mm]{nyquist.png}\end{figure}' ];
 end
