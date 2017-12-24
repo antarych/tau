@@ -1,4 +1,4 @@
-function [task, answer] = SaveStability32()
+function [task, answer] = SaveStability32() %Исследовать устойчивость системы управления, которая описывается следующим уравнением
 coef = Generate();
 coef(1)=1;
 if coef(2)*coef(3)*coef(4)-coef(2)*coef(2)*coef(5)-coef(1)*coef(4)*coef(4)>0

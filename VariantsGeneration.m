@@ -54,5 +54,20 @@ switch n
         answer = [fullAnswer '\\\item ' answer1];
 end;
 
+fullTask = task;
+fullAnswer = answer;
+
+n = randi([1,2]); %4-ое задание - робастная устойчивость или критическое запаздывание
+switch n
+    case 1
+        [task1, answer1] = Robast();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];
+    case 2
+        [task1, answer1] = Krit();
+        task = [fullTask '\\\item ' task1];
+        answer = [fullAnswer '\\\item ' answer1];    
+end;
+
 SaveLaTeX(task, 'task.tex');
 SaveLaTeX(answer, 'answer.tex');

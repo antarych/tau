@@ -1,4 +1,4 @@
-function SaveLaTeX(task, fileName) %сохранение передаточных функций в файл
+function SaveLaTeX(task, fileName) %сохранение в tex файл
 beginning1 = '\documentclass{article}\usepackage[cp1251]{inputenc}';
 beginning2 = '\usepackage{amsmath, amssymb, amsfonts, amsthm}';
 beginning3 = '\usepackage[T2A]{fontenc}';

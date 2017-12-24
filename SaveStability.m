@@ -1,4 +1,4 @@
-function [task, answer] = SaveStability()
+function [task, answer] = SaveStability()%Исследовать устойчивость системы управления, характеристическое уравнение которой имеет вид
 coef = Generate();
 coef(1)=1;
 if coef(2)*coef(3)*coef(4)-coef(2)*coef(2)*coef(5)-coef(1)*coef(4)*coef(4)>0

@@ -1,4 +1,4 @@
-function [task, answer] = SaveStability33()
+function [task, answer] = SaveStability33()%Исследовать устойчивость замкнутой системы при следующей передаточной функции разомкнутой системы
 coef = Generate();
 coef(1)=1;
 if coef(2)*(coef(3)+1)*(coef(4)+coef(6))-coef(2)*coef(2)*(coef(5)+coef(7))-coef(1)*(coef(4)+coef(6))*(coef(4)+coef(6))>0

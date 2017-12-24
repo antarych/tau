@@ -1,4 +1,4 @@
-function coef=Generate()
+function coef=Generate() %генерирование коэффициентов для заданий на устойчивость
 coef=zeros(1,7);
 coef(1)=1;
 for i=2:7

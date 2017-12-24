@@ -1,4 +1,4 @@
-function [task, answer] = Mikhilov()
+function [task, answer] = Mikhilov() %определение устойчивости по критерию Михайлова
 coef = Generate();
 coef(1) = roundn(rand(1), -2);
 

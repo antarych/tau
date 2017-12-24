@@ -1,4 +1,4 @@
-function [coefY, coefU, coefV] = GenerateCoefficients(maxVal)
+function [coefY, coefU, coefV] = GenerateCoefficients(maxVal)%генерирование коэффициентов для ДУ
 maxDerivative = randi([2,maxVal]); 
 n = maxDerivative + 1;
 coefY = zeros(1, n);

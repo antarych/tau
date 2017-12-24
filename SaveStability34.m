@@ -1,4 +1,4 @@
-function [task, answer] = SaveStability34()
+function [task, answer] = SaveStability34() %определение устойчивости по критерию Найквиста
 coef = Generate();
 coef(1)=1;
 if coef(2)*(coef(3)+1)*(coef(4)+coef(6))-coef(2)*coef(2)*(coef(5)+coef(7))-coef(1)*(coef(4)+coef(6))*(coef(4)+coef(6))>0
