@@ -9,9 +9,6 @@ beginning6 = '\noindent';
 beginning7 = '\begin{enumerate}';
 ending1 = '\end{enumerate}';
 ending2 = '\end{document}';
-if exist('.\tasks', 'dir') ~= 7
-    mkdir('.\tasks');
-end;
 file = ['.\tasks\' fileName];
 fileID = fopen(file,'w');
 fprintf(fileID,'%s\n',beginning1);

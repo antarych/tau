@@ -1,4 +1,8 @@
 
+if exist('.\tasks', 'dir') ~= 7
+    mkdir('.\tasks');
+end;
+
 [task1, answer1] = TransferFunctions(); %1-ое задание - найти передаточную функцию (в операторной или в изобр. Лапласа) или найти ДУ по передаточной функции
 task1 = ['\item ' task1 '.'];
 answer1= ['\item ' answer1];
