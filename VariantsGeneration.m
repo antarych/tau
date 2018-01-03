@@ -1,73 +1,66 @@
 
 [task1, answer1] = TransferFunctions(); %1-ое задание - найти передаточную функцию (в операторной или в изобр. Лапласа) или найти ДУ по передаточной функции
-task = ['\item ' task1];
-answer = ['\item ' answer1];
-
-fullTask = task;
-fullAnswer = answer;
+task1 = ['\item ' task1 '.'];
+answer1= ['\item ' answer1];
+    
 
 n = randi([1,4]); %2-ое задание - найти весовую или переходную функцию или частотные характеристики или реакция системы
 switch n
     case 1 
-        [task1, answer1] = WeightFunction();
-        task = [fullTask '\\\item ' task1];
-     answer = [fullAnswer '\\\item ' answer1];
+        [task2, answer2] = WeightFunction();
+        task2 = ['\item ' task2 '.'];
+        answer2 = ['\item ' answer2];
 
     case 2
-        [task1, answer1] = StepResponse();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task2, answer2] = StepResponse();
+        task2 = ['\item ' task2 '.'];
+        answer2 = ['\item ' answer2];
     case 3
-        [task1, answer1] = FrequencyFunction();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task2, answer2] = FrequencyFunction();
+        task2 = ['\item ' task2 '.'];
+        answer2 = ['\item ' answer2];
     case 4
-        [task1, answer1] = SysReaction();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task2, answer2] = SysReaction();
+        task2 = ['\item ' task2 '.'];
+        answer2 = ['\item ' answer2];
 end;
 
-fullTask = task;
-fullAnswer = answer;
 
 n = randi([1,5]); %3-е задание на устойчивость
 switch n
     case 1
-        [task1, answer1] = SaveStability();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task3, answer3] = SaveStability();
+        task3 = ['\item ' task3 '.'];
+        answer3 = ['\item ' answer3];
     case 2
-        [task1, answer1] = SaveStability32();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task3, answer3] = SaveStability32();
+        task3 = ['\item ' task3 '.'];
+        answer3 = ['\item ' answer3];
     case 3
-        [task1, answer1] = SaveStability33();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task3, answer3] = SaveStability33();
+        task3 = ['\item ' task3 '.'];
+        answer3 = ['\item ' answer3];
     case 4
-        [task1, answer1] = SaveStability34();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task3, answer3] = SaveStability34();
+        task3 = ['\item ' task3 '.'];
+        answer3 = ['\item ' answer3];
     case 5
-        [task1, answer1] = Mikhilov();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task3, answer3] = Mikhilov();
+        task3 = ['\item ' task3 '.'];
+        answer3 = ['\item ' answer3];
 end;
-
-fullTask = task;
-fullAnswer = answer;
 
 n = randi([1,2]); %4-ое задание - робастная устойчивость или критическое запаздывание
 switch n
     case 1
-        [task1, answer1] = Robast();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];
+        [task4, answer4] = Robast();
+        task4 = ['\item ' task4 '.'];
+        answer4 = ['\item ' answer4];
     case 2
-        [task1, answer1] = Krit();
-        task = [fullTask '\\\item ' task1];
-        answer = [fullAnswer '\\\item ' answer1];    
+        [task4, answer4] = Krit();
+        task4 = ['\item ' task4 '.'];
+        answer4 = ['\item ' answer4];  
 end;
 
-SaveLaTeX(task, 'task.tex');
-SaveLaTeX(answer, 'answer.tex');
+SaveLaTeX(task1, task2, task3, task4, 'task.tex');
+SaveLaTeX(answer1, answer2, answer3, answer4, 'answer.tex');
