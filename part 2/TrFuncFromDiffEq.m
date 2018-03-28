@@ -60,13 +60,13 @@ trFunc = [ trFunc '\frac{' num2str(numerator) '}{' num2str(denominator) '}'];
 
 if (type == 1)
     task = [ 'Ќайдите передаточную функцию (в операторной форме) дискретной системы, котора€ описываетс€ данным разностным уравнением\\' strrep(strrep(diffEq, '1', ''), ' + 0T', '')];
-    answer = strrep(strrep(strrep(strrep([ '$' trFunc '$' ], '^1', ''), '1E^0', '1'), 'E^0', ''), '1E', 'E');
+    answer = [ '$' 'W^*(E) = ' strrep(strrep(strrep(strrep([trFunc '$' ], '^1', ''), '1E^0', '1'), 'E^0', ''), '1E', 'E') ];
 end;
 
 if (type == 2)
     task = [ 'Ќайдите передаточную функцию (в z-изображени€х) дискретной системы, котора€ описываетс€ данным разностным уравнением\\' strrep(strrep(diffEq, '1', ''), ' + 0T', '')];
-    answer = [ '$' latex(simplify(num/den)) '$' ];
-    %answer = simple(strrep(strrep(strrep(strrep(strrep([ '$' trFunc '$' ], '^1', ''), '1E^0', '1'), 'E^0', ''), '1E', 'E'), 'E', 'z'));
+    answer = [ '$'  'W^*(z) = ' latex(simplify(num/den)) '$' ];
+   
 end;
 
 if (type == 3)
