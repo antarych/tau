@@ -7,6 +7,16 @@ end;
 task1 = ['\item ' task1 '.'];
 answer1= ['\item ' answer1];    
 
-SaveLaTeX(task1, '0', '0', '0', 'task.tex');
-SaveLaTeX(answer1, '0', '0', '0', 'answer.tex');
+n = randi([1,2]); %2-ое задание - найти ZT-изображение
+switch n
+    case 1
+        [task2, answer2] = ZTrans67(); 
+    case 2
+        [task2, answer2] = ZTrans69(); 
+end;
+task2 = ['\item ' task2 '.'];
+answer2= ['\item ' answer2];   
+
+SaveLaTeX(task1, task2, '0', '0', 'task.tex');
+SaveLaTeX(answer1, answer2, '0', '0', 'answer.tex');
 
