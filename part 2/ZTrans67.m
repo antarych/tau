@@ -20,10 +20,8 @@ syms s;
 
 num1 = coefNumerator(1);
 den1 = (s+coefDenominator(1));
-first = num1/den1;
 num2 = coefNumerator(2);
 den2 = (s+coefDenominator(2));
-second = num2/den2;
 
 task = latex(simplify((expand(num1*den2)+expand(num2*den1))/expand(den1*den2)));
 task = [ 'Определить $Z_{T}$-изображение при периоде $T = ' num2str(T) '$ следующих передаточных функций:\\' '$W(s) = ' task '$'];
@@ -38,8 +36,8 @@ for i=1:2
         splusa = z/(z-e^a);
         Rz = Rz + splusa*coefNumerator(i);
     end;
-
+end;
 
 answer = [ '$X^*(z) = ' latex((Rz)) '$' ];
 
-end;
+end

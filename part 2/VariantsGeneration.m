@@ -26,13 +26,16 @@ end;
 task2 = ['\item ' task2 '.'];
 answer2= ['\item ' answer2];   
 
-%n = randi([1,3]); %3-ое задание - устойчивость
-n = 2;
+n = randi([1,3]); %3-ое задание - устойчивость
 switch n
     case 1
         [task3, answer3] = Stabiliti71(); 
     case 2
         [task3, answer3] = TrStability72(); 
+    case 3
+        [task3, answer3] = TSSU(); 
+    case 4
+        [task3, answer3] = StabilitySHIM();
 end;
 
 task3 = ['\item ' task3 '.'];
