@@ -1,4 +1,4 @@
-function SaveLaTeX(task1, task2, task3, task4, fileName) %сохранение в tex файл
+function SaveLaTeX(task1, task2, task3, task4, task5, task6, fileName) %сохранение в tex файл
 beginning1 = '\documentclass{article}\usepackage[cp1251]{inputenc}';
 beginning2 = '\usepackage{amsmath, amssymb, amsfonts, amsthm}';
 beginning3 = '\usepackage[T2A]{fontenc}';
@@ -27,6 +27,8 @@ fprintf(fileID,'%s\n',task1);
 fprintf(fileID,'%s\n',task2);
 fprintf(fileID,'%s\n',task3);
 fprintf(fileID,'%s\n',task4);
+fprintf(fileID,'%s\n',task5);
+fprintf(fileID,'%s\n',task6);
 fprintf(fileID,'%s\n',ending1);
 fprintf(fileID,'%s\n',ending2);
 fclose(fileID);
