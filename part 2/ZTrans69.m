@@ -37,8 +37,8 @@ for i=1:2
     if coefDenominator(i) == 0
         Rz = Rz + s*z^(-k)*coefNumerator(i);
     else 
-        a = vpa(coefDenominator(i)*T);
-        splusa = z^(-k)*z*e^(-eps*a)/(z-e^a);
+        a = (coefDenominator(i)*T);
+        splusa = z^(-k)*z*exp(sym(-eps*a))/(z-exp(sym(a)));
         Rz = Rz + splusa*coefNumerator(i);
     end;
 

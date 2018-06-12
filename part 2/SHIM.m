@@ -40,8 +40,8 @@ for i=1:2
     if p(i) == 0
         Rz = Rz + s*r(i);
     else 
-        a = vpa(p(i)*T);
-        splusa = z/(z-e^a);
+        a = (p(i)*T);
+        splusa = z/(z-exp(sym(a)));
         Rz = Rz + splusa*r(i);
     end;
 end;

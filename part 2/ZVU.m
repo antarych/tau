@@ -60,19 +60,19 @@ for i=1:3
                 denom3 = z - 1;
         end;
     else 
-        a = vpa(p(i)*T);
-        splusa = z/(z-e^a);
+        a = (p(i)*T);
+        splusa = z/(z-exp(sym(a)));
         Rz = Rz + splusa*r(i);
         switch i
             case 1
                 num1 = z*r(i);
-                denom1 = z-e^a;
+                denom1 = z-exp(sym(a));
             case 2
                 num2 = z*r(i);
-                denom2 = z-e^a;
+                denom2 = z-exp(sym(a));
             case 3
                 num3 = z*r(i);
-                denom3 = z-e^a;
+                denom3 = z-exp(sym(a));
         end;
     end;
 end;  

@@ -51,19 +51,19 @@ for i=1:3
                 denom13 = z - 1;
         end;
     else 
-        a = vpa(p(i)*T);
-        splusa = z/(z-e^a);
+        a = (p(i)*T);
+        splusa = z/(z-exp(sym(a)));
         Rz = Rz + splusa*r(i);
         switch i
             case 1
                 num11 = z*r(i);
-                denom11 = z-e^a;
+                denom11 = z-exp(sym(a));
             case 2
                 num12 = z*r(i);
-                denom12 = z-e^a;
+                denom12 = z-exp(sym(a));
             case 3
                 num13 = z*r(i);
-                denom13 = z-e^a;
+                denom13 = z-exp(sym(a));
         end;
     end;
 end;  
@@ -87,19 +87,19 @@ for i=1:3
                 denom23 = z - 1;
         end;
     else 
-        a = vpa(p(i)*T);
-        splusa = z^(-k)*z*e^(-eps*a)/(z-e^a);
+        a = (p(i)*T);
+        splusa = z^(-k)*z*exp(sym(-eps*a))/(z-exp(sym(a)));
         Rz = Rz + splusa*r(i);
         switch i
             case 1
-                num21 = z^(-k)*z*e^(eps*a)*r(i);
-                denom21 = z-e^a;
+                num21 = z^(-k)*z*exp(sym(eps*a))*r(i);
+                denom21 = z-exp(sym(a));
             case 2
-                num22 = z^(-k)*z*e^(eps*a)*r(i);
-                denom22 = z-e^a;
+                num22 = z^(-k)*z*exp(sym(-eps*a))*r(i);
+                denom22 = z-exp(sym(a));
             case 3
-                num23 = z^(-k)*z*e^(eps*a)*r(i);
-                denom23 = z-e^a;
+                num23 = z^(-k)*z*exp(sym(-eps*a))*r(i);
+                denom23 = z-exp(sym(a));
         end;
     end;
 end;
